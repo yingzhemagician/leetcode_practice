@@ -24,7 +24,6 @@ public class leetCode_12 {
 
             num = num % values[i];
         }
-
         return res;
     }
 }
