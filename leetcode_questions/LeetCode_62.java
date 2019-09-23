@@ -1,3 +1,6 @@
+/*
+小学奥数，就是当前格子的值等于左边和上边相加
+*/
 class Solution {
     public int uniquePaths(int m, int n) {
         int[][] matrix = new int[n][m];
@@ -12,3 +15,4 @@ class Solution {
         return matrix[n-1][m-1];
     }
 }
+

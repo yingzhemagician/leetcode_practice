@@ -21,13 +21,13 @@ class Solution {
         int diff = Math.abs(target - res);
         int tempDiff = diff, tempSum = res;
         
-        for(int i = 0; i < nums.length; i++){
+        for(int i = 0; i < nums.length - 2; i++){
             for(int j = i + 1, k = nums.length - 1; j < k;){
                 tempSum = nums[i] + nums[j] + nums[k];
                 tempDiff = Math.abs(target - tempSum);
                 
                 if(tempDiff < diff){
-                    res = nums[i] + nums[j] + nums[k];
+                    res = tempSum;
                     diff = tempDiff;
                 }
                 

@@ -4,7 +4,8 @@
 因此，用两个优先队列来存数列的前半部分和后半部分，相当于把数列对半劈开
 优先队列是小的在前大的在后，所以第二个队列就存负数就行
 
-比如 5，4，3
+比如 队尾---队首
+    5，4，3
     -1 -2
 注意如果是奇数的话就保证队列1长就行，return 队列1的 队首
 
@@ -21,12 +22,13 @@ Time and space complexity would be O(100) = O(1).
 
 class MedianFinder {
 
-    private Queue<Long> small = new PriorityQueue();
-    private Queue<Long> large = new PriorityQueue();
+    private Queue<Long> small;
+    private Queue<Long> large;
     
     /** initialize your data structure here. */
     public MedianFinder() {
-        
+        small = new PriorityQueue();
+        large = new PriorityQueue();
     }
     
     public void addNum(int num) {
